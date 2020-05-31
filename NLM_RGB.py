@@ -27,14 +27,10 @@ def weight(x1, y1, x2, y2):
 
 if __name__ == '__main__':
     start = time.clock()
-    # rawFile = 'Lena.png'
-    # img = cv2.imread('org/' + rawFile)
-    # noiseFile = 'Lena_RS1_0.3.png'
-    # n_img = cv2.imread('test/' + noiseFile)
-
-    img = cv2.imread('test_raw.png')
-    noiseFile = 'test.png'
-    n_img = cv2.imread(noiseFile)
+    rawFile = 'Lena.png'
+    img = cv2.imread('org/' + rawFile)
+    noiseFile = 'Lena_RS1_0.3.png'
+    n_img = cv2.imread('test/' + noiseFile)
 
     [H, W, _] = n_img.shape
     _n_img = np.zeros((H + N2 - N1, W + N2 - N1, 3))  # 给矩阵周围加空白像素，方便程序的编写
